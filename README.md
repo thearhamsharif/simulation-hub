@@ -14,13 +14,26 @@ A state-of-the-art **Discrete Event Simulation (DES)** tool designed for modelin
   - Support for **First-In-First-Out (FIFO)**.
   - **Non-Preemptive Priority (NP)**: Higher priority customers jump the queue but don't interrupt service.
   - **Preemptive Priority (PR)**: Higher priority customers can interrupt ongoing service sessions.
+- **Integrated Theory Guide**:
+  - Deep-dive educational content covering Kendall's Notation, distribution basics, and performance metrics.
+  - Detailed mathematical breakdowns and real-world use cases for every supported model.
 - **Cost Optimization Analysis**:
   - Calculate total simulation costs based on server operational costs and customer waiting costs.
 - **Real-Time Visual Analytics**:
   - **Multi-Server Gantt Charts**: Track server usage and idle patterns.
   - **Queue Timeline plots**: Visualize queue length fluctuations over time.
   - **Metric Breakdowns**: Detailed bars and scatter plots for Wait Time, Service Time, and Response Time.
-- **Theoretical Comparison**: Automated comparison between simulated data and theoretical steady-state results.
+
+## 🌐 Professional SEO & Accessibility
+
+- **Professional SEO**:
+  - **JSON-LD Structured Data**: Implemented `WebApplication` and `Article` schemas for optimal search engine indexing.
+  - **Social Meta Tags**: Complete Open Graph and Twitter Card integration for consistent social sharing.
+  - **Semantic HTML**: Optimized structure for search crawlers and performance.
+- **High-End Accessibility**:
+  - **ARIA Landmarks & Labels**: Full support for screen readers with proper landmarks and descriptive labels.
+  - **Dynamic Life Regions**: Uses `aria-live="polite"` for seamless updates.
+  - **A11y Formulas**: Mathematical expressions annotated with ARIA descriptions for full screen-reader clarity.
 
 ## 🛠️ Technical Background
 
