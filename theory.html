@@ -5,17 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Queuing Theory Guide | Simulation Hub</title>
+    <meta name="description" content="Master queuing theory with our comprehensive guide. Detailed formulas and real-world examples for M/M/c, M/G/1, and more.">
+    <meta name="keywords" content="Queuing Theory, M/M/1 Formula, M/G/1 Model, Kendall's Notation, Little's Law, Simulation Modeling Guide">
+    <meta name="author" content="Arham Sharif">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thearhamsharif.github.io/simulation-hub/theory.html">
+    <meta property="og:title" content="Queuing Theory Guide | Simulation Hub">
+    <meta property="og:description" content="The definitive guide to queuing theory for analysts and managers. Includes M/M/c, M/G/1, and cost optimization formulas.">
+    <meta property="og:image" content="assets/social_preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thearhamsharif.github.io/simulation-hub/theory.html">
+    <meta property="twitter:title" content="Queuing Theory Guide | Simulation Hub">
+    <meta property="twitter:description" content="The definitive guide to queuing theory for analysts and managers.">
+    <meta property="twitter:image" content="assets/social_preview.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Queuing Theory Guide",
+      "description": "A comprehensive guide to queuing theory, covering models from M/M/1 to G/G/c, Kendall's Notation, and operational efficiency.",
+      "applicationCategory": "EducationalApplication, BusinessApplication",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Person",
+        "name": "Arham Sharif"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thearhamsharif.github.io/simulation-hub/theory.html"
+      }
+    }
+    </script>
   </head>
 
-  <body>
-    <header class="main-header">
+  <body aria-labelledby="theory-page-title">
+    <header class="main-header" role="banner">
       <div class="logo">
-        <h1>Department Simulation</h1>
+        <h1 id="theory-page-title">Department Simulation</h1>
         <p>Simulation & Modeling Analysis Hub</p>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Simulator</a></li>
           <li><a href="theory.html" class="active">Theory Guide</a></li>
@@ -23,20 +67,20 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container" role="main">
       <header class="theory-header">
         <h2>Queuing Theory Essentials</h2>
         <p>Fundamental concepts, definitions, and mathematical models for system optimization.</p>
       </header>
 
       <!-- Fundamental Parameters -->
-      <section class="theory-section">
-        <h2 class="section-title">Fundamental Parameters</h2>
+      <section class="theory-section" aria-labelledby="params-title">
+        <h2 class="section-title" id="params-title">Fundamental Parameters</h2>
         <div class="card">
           <ul class="def-list">
             <li>
               <span class="def-term"><span class="math-inline">&lambda;</span> (Lambda)</span>
-              <span class="def-desc">Arrival Rate: The average number of customers arriving per unit of time.</span>
+              <span class="def-desc">Arrival Rate: The average number of customers arriving per unit of time (e.g., 10 per hour).</span>
             </li>
             <li>
               <span class="def-term"><span class="math-inline">&mu;</span> (Mu)</span>
@@ -58,35 +102,103 @@
         </div>
       </section>
 
+      <!-- Kendall's Notation -->
+      <section class="theory-section" aria-labelledby="kendall-title">
+        <h2 class="section-title" id="kendall-title">Kendall's Notation</h2>
+        <div class="card" role="region" aria-label="Reference Table for Kendall's Notation">
+          <p>Standardized shorthand for describing queuing models in the format: <strong>A / B / c / K / m / Z</strong></p>
+          <div class="theory-table-wrapper" role="region" aria-label="Kendall Symbols Reference">
+            <table class="theory-table">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Meaning</th>
+                  <th>Common Values</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>A</strong></td>
+                  <td>Arrival Distribution</td>
+                  <td>M (Poisson/Markov), G (General), D (Deterministic)</td>
+                </tr>
+                <tr>
+                  <td><strong>B</strong></td>
+                  <td>Service Distribution</td>
+                  <td>M (Exponential), G (General), D (Deterministic)</td>
+                </tr>
+                <tr>
+                  <td><strong>c</strong></td>
+                  <td>Number of Servers</td>
+                  <td>1, 2, 3, ... (Parallel channels)</td>
+                </tr>
+                <tr>
+                  <td><strong>K</strong></td>
+                  <td>System Capacity</td>
+                  <td>&infin; (Infinite), or finite integer (e.g., 10)</td>
+                </tr>
+                <tr>
+                  <td><strong>m</strong></td>
+                  <td>Source Population</td>
+                  <td>&infin; (Infinite), or finite pool sizes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Distribution Basics -->
+      <section class="theory-section" aria-labelledby="dist-title">
+        <h2 class="section-title" id="dist-title">Distribution Basics</h2>
+        <div class="theory-grid" role="list">
+          <div class="card" role="listitem">
+            <span class="dist-badge poisson" aria-label="Poisson Arrival Distribution">Poisson Arrival</span>
+            <h4>Random Arrivals</h4>
+            <p>When arrivals are independent and occur randomly at a constant average rate. The number of arrivals in a time interval follows a Poisson Distribution.</p>
+          </div>
+          <div class="card" role="listitem">
+            <span class="dist-badge expo" aria-label="Exponential Service Distribution">Exponential Service</span>
+            <h4>Markovian Property</h4>
+            <p>The service time distribution is "memoryless," meaning the time remaining to complete a task does not depend on how much time has already elapsed.</p>
+          </div>
+          <div class="card" role="listitem">
+            <span class="dist-badge det" aria-label="Deterministic Distribution">Deterministic</span>
+            <h4>Constant Time</h4>
+            <p>Service or Arrivals occur at perfectly fixed intervals. Variance is zero (<span class="math-inline">&sigma;<span class="sup">2</span> = 0</span>). Common in automated machinery.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Performance Metrics -->
-      <section class="theory-section">
-        <h2 class="section-title">Performance Metrics</h2>
-        <div class="theory-grid">
-          <div class="formula-card">
+      <section class="theory-section" aria-labelledby="metrics-title">
+        <h2 class="section-title" id="metrics-title">Performance Metrics</h2>
+        <div class="theory-grid" role="list">
+          <div class="formula-card" role="listitem" aria-label="Average Queue Length formula">
             <h4>Average Queue Length (L<sub>q</sub>)</h4>
             <p>Expected number of customers waiting in the queue.</p>
-            <div class="math-block">
+            <div class="math-block" role="img" aria-label="L subscript q equals summation of n minus c times P subscript n">
               <span class="math">L<span class="sub">q</span> = &sum; (n-c) P<span class="sub">n</span></span>
             </div>
           </div>
-          <div class="formula-card">
+          <div class="formula-card" role="listitem" aria-label="Average System Length formula">
             <h4>Average System Length (L<sub>s</sub>)</h4>
             <p>Expected number of customers in the entire system.</p>
-            <div class="math-block">
+            <div class="math-block" role="img" aria-label="L subscript s equals L subscript q plus lambda over mu">
               <span class="math">L<span class="sub">s</span> = L<span class="sub">q</span> + <span class="frac"><span>&lambda;</span><span class="bottom">&mu;</span></span></span>
             </div>
           </div>
-          <div class="formula-card">
+          <div class="formula-card" role="listitem" aria-label="Average Waiting Time formula">
             <h4>Average Waiting Time (W<sub>q</sub>)</h4>
             <p>Expected time a customer spends waiting in the queue.</p>
-            <div class="math-block">
+            <div class="math-block" role="img" aria-label="W subscript q equals L subscript q over lambda">
               <span class="math">W<span class="sub">q</span> = <span class="frac"><span>L<span class="sub">q</span></span><span class="bottom">&lambda;</span></span></span>
             </div>
           </div>
-          <div class="formula-card">
+          <div class="formula-card" role="listitem" aria-label="Average Turnaround Time formula">
             <h4>Average Turnaround Time (W<sub>s</sub>)</h4>
             <p>Total time spent in the system (Wait + Service).</p>
-            <div class="math-block">
+            <div class="math-block" role="img" aria-label="W subscript s equals W subscript q plus 1 over mu">
               <span class="math">W<span class="sub">s</span> = W<span class="sub">q</span> + <span class="frac"><span>1</span><span class="bottom">&mu;</span></span></span>
             </div>
           </div>
@@ -94,17 +206,19 @@
       </section>
 
       <!-- Model Specific Formulas -->
-      <section class="theory-section">
-        <h2 class="section-title">Model-Specific Formulas</h2>
-        <div class="theory-grid">
+      <section class="theory-section" aria-labelledby="models-title">
+        <h2 class="section-title" id="models-title">Model-Specific Formulas</h2>
+        <div class="theory-grid" role="list">
           <!-- M/M/1 -->
           <div class="formula-card">
             <span class="model-badge">M/M/1</span>
             <h4>Single Server Markovian</h4>
-            <p>Simplest model with Poisson arrivals and Exponential service.</p>
             <div class="math-block">
-              <span class="math">P<span class="sub">0</span> = 1 - &rho;</span>
               <span class="math">L<span class="sub">q</span> = <span class="frac"><span>&rho;<span class="sup">2</span></span><span class="bottom">1 - &rho;</span></span></span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Bank teller with a single window, small coffee shops, or a single repair technician.
             </div>
           </div>
 
@@ -112,9 +226,12 @@
           <div class="formula-card">
             <span class="model-badge">M/M/c</span>
             <h4>Multi-Server Markovian</h4>
-            <p>System with <span class="math-inline">c</span> identical parallel servers.</p>
             <div class="math-block">
               <span class="math">P<span class="sub">0</span> = [ &sum;<span class="frac"><span>(&lambda;/&mu;)<span class="sup">n</span></span><span class="bottom">n!</span></span> + <span class="frac"><span>(&lambda;/&mu;)<span class="sup">c</span></span><span class="bottom">c!(1-&rho;)</span></span> ]<span class="sup">-1</span></span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Call centers with multiple agents, supermarket checkout lines, or hospital emergency rooms.
             </div>
           </div>
 
@@ -122,10 +239,13 @@
           <div class="formula-card">
             <span class="model-badge">M/M/1/K</span>
             <h4>Finite Capacity Single Server</h4>
-            <p>System blocks new arrivals when <span class="math-inline">K</span> is reached.</p>
             <div class="math-block">
               <span class="math">P<span class="sub">0</span> = <span class="frac"><span>1 - &rho;</span><span class="bottom">1 - &rho;<span class="sup">K+1</span></span></span></span>
               <span class="math">P<span class="sub">K</span> = &rho;<span class="sup">K</span> P<span class="sub">0</span></span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Single repair shop with limited parking space for cars waiting for service.
             </div>
           </div>
 
@@ -133,10 +253,12 @@
           <div class="formula-card">
             <span class="model-badge">M/M/c/K</span>
             <h4>Finite Multi-Server Markovian</h4>
-            <p>System with capacity <span class="math-inline">K</span> and <span class="math-inline">c</span> servers.</p>
             <div class="math-block">
               <span class="math">P<span class="sub">f</span> = P<span class="sub">K</span> = <span class="frac"><span>(&lambda;/&mu;)<span class="sup">K</span></span><span class="bottom">c!(c<span class="sup">K-c</span>)</span></span> P<span class="sub">0</span></span>
-              <span class="math">&lambda;<span class="sub">eff</span> = &lambda;(1 - P<span class="sub">f</span>)</span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Parking lots with fixed spaces, buffer zones in assembly lines, or server clusters.
             </div>
           </div>
 
@@ -144,10 +266,12 @@
           <div class="formula-card">
             <span class="model-badge">M/D/1</span>
             <h4>Deterministic Service</h4>
-            <p>Constant service time (Zero variance, <span class="math-inline">&sigma;<span class="sup">2</span> = 0</span>).</p>
             <div class="math-block">
               <span class="math">L<span class="sub">q</span> = <span class="frac"><span>&rho;<span class="sup">2</span></span><span class="bottom">2(1 - &rho;)</span></span></span>
-              <span class="math">W<span class="sub">q</span> = <span class="frac"><span>&rho;</span><span class="bottom">2&mu;(1 - &rho;)</span></span></span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Automated car wash, robotic assembly station, or periodic scheduled maintenance.
             </div>
           </div>
 
@@ -155,27 +279,58 @@
           <div class="formula-card">
             <span class="model-badge">G/G/c</span>
             <h4>General Multi-Server (Approx)</h4>
-            <p>Allen-Cunneen approximation for general distributions.</p>
             <div class="math-block">
               <span class="math">W<span class="sub">q</span> &approx; <span class="frac"><span>P(L&ge;c)</span><span class="bottom">c&mu;(1-&rho;)</span></span> &middot; <span class="frac"><span>C<span class="sub">a</span><span class="sup">2</span> + C<span class="sub">s</span><span class="sup">2</span></span><span class="bottom">2</span></span></span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Manufacturing systems with non-standard arrival and service distributions.
             </div>
           </div>
 
           <!-- M/G/1 -->
           <div class="formula-card">
             <span class="model-badge">M/G/1</span>
-            <h4>General Service (Pollaczek-Khinchine)</h4>
-            <p>For any service distribution with variance <span class="math-inline">&sigma;<span class="sup">2</span></span>.</p>
+            <h4>General Service</h4>
             <div class="math-block">
               <span class="math">L<span class="sub">q</span> = <span class="frac"><span>&lambda;<span class="sup">2</span>&sigma;<span class="sup">2</span> + &rho;<span class="sup">2</span></span><span class="bottom">2(1 - &rho;)</span></span></span>
+            </div>
+            <div class="use-case-card">
+              <strong>Real-World Use Case</strong>
+              Post offices where different tasks (mailing, passport, etc.) take highly variable times.
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Operational Efficiency & Costs -->
+      <section class="theory-section" aria-labelledby="efficiency-title">
+        <h2 class="section-title" id="efficiency-title">Operational Efficiency & Costs</h2>
+        <div class="highlight-box">
+          <h4>The Stability Rule</h4>
+          <p>For any system with infinite capacity, the <strong>Stability Condition</strong> must be met: <span class="math-inline">&lambda; < c&mu;</span> (Arrival rate must be less than total service capacity). If this is violated, the queue grows to infinity!</p>
+        </div>
+
+        <div class="theory-grid">
+          <div class="card">
+            <h4>Wait Cost vs. Service Cost</h4>
+            <p>Management must balance two opposing costs:</p>
+            <ul class="def-list" style="margin-top: 1rem;">
+              <li><strong>Service Cost:</strong> Cost of providing service (paying servers, electricity). Increases as <em>c</em> increases.</li>
+              <li><strong>Waiting Cost:</strong> Cost of customer dissatisfaction or lost productivity. Decreases as <em>c</em> increases.</li>
+            </ul>
+            <p style="margin-top:1rem; font-weight:700;">Total Cost = (c &times; C<sub>server</sub>) + (L<sub>s</sub> &times; C<sub>wait</sub>)</p>
+          </div>
+          <div class="card">
+            <h4>System Optimization</h4>
+            <p>The "Sweet Spot" is the number of servers where the <strong>Total Cost</strong> is at its minimum value. This simulator helps you find that exact point by modeling different configurations.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- System Failure / Blocking -->
-      <section class="theory-section">
-        <h2 class="section-title">System Failure Analysis (P<sub>f</sub>)</h2>
+      <section class="theory-section" aria-labelledby="failure-title">
+        <h2 class="section-title" id="failure-title">System Failure Analysis (P<sub>f</sub>)</h2>
         <div class="card" style="border-left: 8px solid var(--dropped-color);">
           <h4>Blocking Probability (P<sub>f</sub>)</h4>
           <p>In finite capacity systems (K), arriving customers are <strong>blocked</strong> (dropped) if the system is full. This is often referred to as "System Failure" in certain engineering contexts.</p>
@@ -193,11 +348,12 @@
       </section>
 
       <!-- Little's Law -->
-      <section class="theory-section">
-        <div class="card" style="border-left: 8px solid var(--accent-color);">
-          <h4>Little's Law</h4>
+      <section class="theory-section" aria-labelledby="littles-title">
+        <h2 class="section-title" id="littles-title" style="display:none;">Little's Law</h2>
+        <div class="card" style="border-left: 8px solid var(--accent-color);" role="region" aria-labelledby="littles-law-heading">
+          <h4 id="littles-law-heading">Little's Law</h4>
           <p>The long-term average number of customers in a stationary system <strong>L</strong> is equal to the long-term average effective arrival rate <strong>&lambda;</strong> multiplied by the average time a customer spends in the system <strong>W</strong>.</p>
-          <div class="math-block">
+          <div class="math-block" role="img" aria-label="L equals lambda times W">
             <span class="math" style="color: var(--accent-color); font-weight: 800;">L = &lambda;W</span>
           </div>
         </div>

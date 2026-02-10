@@ -1,4 +1,4 @@
-# <img src="assets/favicon.png" width="32" height="32"> Department Simulation | Professional Analytical Hub
+# <img src="assets/favicon.png" width="32" height="32"> Department Simulation | Simulation Hub
 
 ![Social Preview](assets/social_preview.png)
 
