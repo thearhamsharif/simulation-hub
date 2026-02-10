@@ -171,6 +171,28 @@
         </div>
       </section>
 
+      <!-- Queue Discipline & Priority -->
+      <section class="theory-section" aria-labelledby="priority-title">
+        <h2 class="section-title" id="priority-title">Queue Discipline & Priority</h2>
+        <div class="theory-grid" role="list">
+          <div class="card" role="listitem">
+            <span class="dist-badge fifo" aria-label="First-In-First-Out (FIFO)">FIFO</span>
+            <h4>Standard Queuing</h4>
+            <p><strong>First-In-First-Out:</strong> Customers are served in the exact order they arrive. This is the most common and "fair" discipline for general service systems.</p>
+          </div>
+          <div class="card" role="listitem">
+            <span class="dist-badge np" aria-label="Non-Preemptive Priority">Non-Preemptive (NP)</span>
+            <h4>Queue Jumping</h4>
+            <p><strong>Priority over line:</strong> High-priority customers move to the front of the queue but do <strong>not</strong> interrupt someone currently being served.</p>
+          </div>
+          <div class="card" role="listitem">
+            <span class="dist-badge pr" aria-label="Preemptive Priority">Preemptive (PR)</span>
+            <h4>Immediate Service</h4>
+            <p><strong>Service Interruption:</strong> High-priority customers can stop the current service session to be handled immediately. Common in emergency medical triage.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Performance Metrics -->
       <section class="theory-section" aria-labelledby="metrics-title">
         <h2 class="section-title" id="metrics-title">Performance Metrics</h2>

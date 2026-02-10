@@ -733,6 +733,21 @@ canvas {
   color: #075985;
 }
 
+.dist-badge.fifo {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.dist-badge.np {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.dist-badge.pr {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
 .highlight-box {
   background: #f1f5f9;
   padding: 2rem;
