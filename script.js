@@ -3,6 +3,12 @@ document.getElementById('resetBtn').addEventListener('click', resetSimulation);
 document.getElementById('queuingModel').addEventListener('change', onModelChange);
 onModelChange(); // Initialize labels
 
+// Set current year in footer
+const yearSpan = document.getElementById('current-year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
 function onModelChange() {
   const model = document.getElementById('queuingModel').value;
   const serverInput = document.getElementById('serverCount');
