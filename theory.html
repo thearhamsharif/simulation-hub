@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queuing Theory Guide | Simulation Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <h1>Department Simulation</h1>
+        <p>Simulation & Modeling Analysis Hub</p>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Simulator</a></li>
+          <li><a href="theory.html" class="active">Theory Guide</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <header class="theory-header">
+        <h2>Queuing Theory Essentials</h2>
+        <p>Fundamental concepts, definitions, and mathematical models for system optimization.</p>
+      </header>
+
+      <!-- Fundamental Parameters -->
+      <section class="theory-section">
+        <h2 class="section-title">Fundamental Parameters</h2>
+        <div class="card">
+          <ul class="def-list">
+            <li>
+              <span class="def-term"><span class="math-inline">&lambda;</span> (Lambda)</span>
+              <span class="def-desc">Arrival Rate: The average number of customers arriving per unit of time.</span>
+            </li>
+            <li>
+              <span class="def-term"><span class="math-inline">&mu;</span> (Mu)</span>
+              <span class="def-desc">Service Rate: The average number of customers a server can handle per unit of time.</span>
+            </li>
+            <li>
+              <span class="def-term"><span class="math-inline">c</span> (Servers)</span>
+              <span class="def-desc">Server Count: The number of parallel service channels available in the system.</span>
+            </li>
+            <li>
+              <span class="def-term"><span class="math-inline">&rho;</span> (Rho)</span>
+              <span class="def-desc">Utilization Factor: The fraction of time a server is busy. For stability in infinite systems, <span class="math-inline">&rho; < 1</span>.</span>
+            </li>
+            <li>
+              <span class="def-term"><span class="math-inline">K</span> (Capacity)</span>
+              <span class="def-desc">System Capacity: The maximum number of customers allowed in the system (queue + service).</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Performance Metrics -->
+      <section class="theory-section">
+        <h2 class="section-title">Performance Metrics</h2>
+        <div class="theory-grid">
+          <div class="formula-card">
+            <h4>Average Queue Length (L<sub>q</sub>)</h4>
+            <p>Expected number of customers waiting in the queue.</p>
+            <div class="math-block">
+              <span class="math">L<span class="sub">q</span> = &sum; (n-c) P<span class="sub">n</span></span>
+            </div>
+          </div>
+          <div class="formula-card">
+            <h4>Average System Length (L<sub>s</sub>)</h4>
+            <p>Expected number of customers in the entire system.</p>
+            <div class="math-block">
+              <span class="math">L<span class="sub">s</span> = L<span class="sub">q</span> + <span class="frac"><span>&lambda;</span><span class="bottom">&mu;</span></span></span>
+            </div>
+          </div>
+          <div class="formula-card">
+            <h4>Average Waiting Time (W<sub>q</sub>)</h4>
+            <p>Expected time a customer spends waiting in the queue.</p>
+            <div class="math-block">
+              <span class="math">W<span class="sub">q</span> = <span class="frac"><span>L<span class="sub">q</span></span><span class="bottom">&lambda;</span></span></span>
+            </div>
+          </div>
+          <div class="formula-card">
+            <h4>Average Turnaround Time (W<sub>s</sub>)</h4>
+            <p>Total time spent in the system (Wait + Service).</p>
+            <div class="math-block">
+              <span class="math">W<span class="sub">s</span> = W<span class="sub">q</span> + <span class="frac"><span>1</span><span class="bottom">&mu;</span></span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Model Specific Formulas -->
+      <section class="theory-section">
+        <h2 class="section-title">Model-Specific Formulas</h2>
+        <div class="theory-grid">
+          <!-- M/M/1 -->
+          <div class="formula-card">
+            <span class="model-badge">M/M/1</span>
+            <h4>Single Server Markovian</h4>
+            <p>Simplest model with Poisson arrivals and Exponential service.</p>
+            <div class="math-block">
+              <span class="math">P<span class="sub">0</span> = 1 - &rho;</span>
+              <span class="math">L<span class="sub">q</span> = <span class="frac"><span>&rho;<span class="sup">2</span></span><span class="bottom">1 - &rho;</span></span></span>
+            </div>
+          </div>
+
+          <!-- M/M/c -->
+          <div class="formula-card">
+            <span class="model-badge">M/M/c</span>
+            <h4>Multi-Server Markovian</h4>
+            <p>System with <span class="math-inline">c</span> identical parallel servers.</p>
+            <div class="math-block">
+              <span class="math">P<span class="sub">0</span> = [ &sum;<span class="frac"><span>(&lambda;/&mu;)<span class="sup">n</span></span><span class="bottom">n!</span></span> + <span class="frac"><span>(&lambda;/&mu;)<span class="sup">c</span></span><span class="bottom">c!(1-&rho;)</span></span> ]<span class="sup">-1</span></span>
+            </div>
+          </div>
+
+          <!-- M/M/1/K -->
+          <div class="formula-card">
+            <span class="model-badge">M/M/1/K</span>
+            <h4>Finite Capacity Single Server</h4>
+            <p>System blocks new arrivals when <span class="math-inline">K</span> is reached.</p>
+            <div class="math-block">
+              <span class="math">P<span class="sub">0</span> = <span class="frac"><span>1 - &rho;</span><span class="bottom">1 - &rho;<span class="sup">K+1</span></span></span></span>
+              <span class="math">P<span class="sub">K</span> = &rho;<span class="sup">K</span> P<span class="sub">0</span></span>
+            </div>
+          </div>
+
+          <!-- M/M/c/K -->
+          <div class="formula-card">
+            <span class="model-badge">M/M/c/K</span>
+            <h4>Finite Multi-Server Markovian</h4>
+            <p>System with capacity <span class="math-inline">K</span> and <span class="math-inline">c</span> servers.</p>
+            <div class="math-block">
+              <span class="math">P<span class="sub">f</span> = P<span class="sub">K</span> = <span class="frac"><span>(&lambda;/&mu;)<span class="sup">K</span></span><span class="bottom">c!(c<span class="sup">K-c</span>)</span></span> P<span class="sub">0</span></span>
+              <span class="math">&lambda;<span class="sub">eff</span> = &lambda;(1 - P<span class="sub">f</span>)</span>
+            </div>
+          </div>
+
+          <!-- M/D/1 -->
+          <div class="formula-card">
+            <span class="model-badge">M/D/1</span>
+            <h4>Deterministic Service</h4>
+            <p>Constant service time (Zero variance, <span class="math-inline">&sigma;<span class="sup">2</span> = 0</span>).</p>
+            <div class="math-block">
+              <span class="math">L<span class="sub">q</span> = <span class="frac"><span>&rho;<span class="sup">2</span></span><span class="bottom">2(1 - &rho;)</span></span></span>
+              <span class="math">W<span class="sub">q</span> = <span class="frac"><span>&rho;</span><span class="bottom">2&mu;(1 - &rho;)</span></span></span>
+            </div>
+          </div>
+
+          <!-- G/G/c -->
+          <div class="formula-card">
+            <span class="model-badge">G/G/c</span>
+            <h4>General Multi-Server (Approx)</h4>
+            <p>Allen-Cunneen approximation for general distributions.</p>
+            <div class="math-block">
+              <span class="math">W<span class="sub">q</span> &approx; <span class="frac"><span>P(L&ge;c)</span><span class="bottom">c&mu;(1-&rho;)</span></span> &middot; <span class="frac"><span>C<span class="sub">a</span><span class="sup">2</span> + C<span class="sub">s</span><span class="sup">2</span></span><span class="bottom">2</span></span></span>
+            </div>
+          </div>
+
+          <!-- M/G/1 -->
+          <div class="formula-card">
+            <span class="model-badge">M/G/1</span>
+            <h4>General Service (Pollaczek-Khinchine)</h4>
+            <p>For any service distribution with variance <span class="math-inline">&sigma;<span class="sup">2</span></span>.</p>
+            <div class="math-block">
+              <span class="math">L<span class="sub">q</span> = <span class="frac"><span>&lambda;<span class="sup">2</span>&sigma;<span class="sup">2</span> + &rho;<span class="sup">2</span></span><span class="bottom">2(1 - &rho;)</span></span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- System Failure / Blocking -->
+      <section class="theory-section">
+        <h2 class="section-title">System Failure Analysis (P<sub>f</sub>)</h2>
+        <div class="card" style="border-left: 8px solid var(--dropped-color);">
+          <h4>Blocking Probability (P<sub>f</sub>)</h4>
+          <p>In finite capacity systems (K), arriving customers are <strong>blocked</strong> (dropped) if the system is full. This is often referred to as "System Failure" in certain engineering contexts.</p>
+          <ul class="def-list" style="margin-top: 1rem;">
+            <li>
+              <span class="def-term">Definition</span>
+              <span class="def-desc">P<sub>f</sub> is the probability that an arriving customer enters a system that already contains K customers.</span>
+            </li>
+            <li>
+              <span class="def-term">Effective Rate</span>
+              <span class="def-desc">&lambda;<sub>eff</sub> = &lambda;(1 - P<sub>f</sub>) is the actual rate at which customers enter and are served.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Little's Law -->
+      <section class="theory-section">
+        <div class="card" style="border-left: 8px solid var(--accent-color);">
+          <h4>Little's Law</h4>
+          <p>The long-term average number of customers in a stationary system <strong>L</strong> is equal to the long-term average effective arrival rate <strong>&lambda;</strong> multiplied by the average time a customer spends in the system <strong>W</strong>.</p>
+          <div class="math-block">
+            <span class="math" style="color: var(--accent-color); font-weight: 800;">L = &lambda;W</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--light-text); font-size: 0.9rem;">
+      &copy; 2026 Simulation & Modeling Analysis Hub. All Rights Reserved.
+    </footer>
+  </body>
+
+</html>

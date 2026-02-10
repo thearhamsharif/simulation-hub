@@ -488,6 +488,167 @@ canvas {
   animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1), fadeOut 0.5s ease 4.5s forwards;
 }
 
+/* Theory Page Specific Styles */
+.theory-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.theory-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.theory-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.theory-section {
+  margin-bottom: 4rem;
+}
+
+.theory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.formula-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+}
+
+.formula-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.formula-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Math Formatting */
+.math-block {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+.math {
+  font-family: 'Cambria Math', 'serif';
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #1e293b;
+  display: block;
+  text-align: center;
+}
+
+.math-inline {
+  font-family: 'Cambria Math', 'serif';
+  font-style: italic;
+  font-weight: 600;
+}
+
+.frac {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 0.1em;
+}
+
+.frac>span {
+  display: block;
+  padding: 0.05em 0.2em;
+}
+
+.frac span.bottom {
+  border-top: 1.5px solid #1e293b;
+}
+
+.sup {
+  vertical-align: super;
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+.sub {
+  vertical-align: sub;
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+.def-list {
+  list-style: none;
+}
+
+.def-list li {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.def-list li:last-child {
+  border-bottom: none;
+}
+
+.def-term {
+  font-weight: 700;
+  color: var(--primary-color);
+  min-width: 120px;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.def-desc {
+  color: var(--light-text);
+  font-size: 0.95rem;
+}
+
+.model-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .theory-header h2 {
+    font-size: 2rem;
+  }
+
+  .theory-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .success-toast {
   border-left-color: #10b981;
 }
