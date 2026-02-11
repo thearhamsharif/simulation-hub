@@ -52,6 +52,7 @@
   </head>
 
   <body aria-labelledby="theory-page-title">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="main-header" role="banner">
       <div class="logo">
         <h1 id="theory-page-title">Department Simulation</h1>
@@ -72,7 +73,7 @@
       </div>
     </div>
 
-    <main class="container" role="main" aria-live="polite">
+    <main class="container" role="main" aria-live="polite" id="main-content">
       <header class="theory-header">
         <h2>Queuing Theory Essentials</h2>
         <p>Fundamental concepts, definitions, and mathematical models for system optimization.</p>
@@ -80,7 +81,7 @@
 
       <!-- Fundamental Parameters -->
       <section class="theory-section" aria-labelledby="params-title">
-        <h2 class="section-title" id="params-title">Fundamental Parameters</h2>
+        <h3 class="section-title" id="params-title">Fundamental Parameters</h3>
         <div class="card">
           <ul class="def-list">
             <li>
@@ -119,7 +120,7 @@
 
       <!-- Kendall's Notation -->
       <section class="theory-section" aria-labelledby="kendall-title">
-        <h2 class="section-title" id="kendall-title">Kendall's Notation</h2>
+        <h3 class="section-title" id="kendall-title">Kendall's Notation</h3>
         <div class="card" role="region" aria-label="Reference Table for Kendall's Notation">
           <p>Standardized shorthand for describing queuing models in the format: <strong>A / B / c / K / m / Z</strong></p>
           <div class="theory-table-wrapper" role="region" aria-label="Kendall Symbols Reference">
@@ -214,29 +215,29 @@
           <div class="formula-card" role="listitem" aria-label="Average Queue Length formula">
             <h4>Average Queue Length (L<sub>q</sub>)</h4>
             <p>Expected number of customers waiting in the queue.</p>
-            <div class="math-block" role="img" aria-label="L subscript q equals summation of n minus c times P subscript n">
-              <span class="math">L<span class="sub">q</span> = &sum; (n-c) P<span class="sub">n</span></span>
+            <div class="math-block" role="img" aria-label="Average Queue Length L subscript q equals the summation of n minus server count c times the probability of n customers in the system P subscript n">
+              <span class="math" aria-hidden="true">L<span class="sub">q</span> = &sum; (n-c) P<span class="sub">n</span></span>
             </div>
           </div>
           <div class="formula-card" role="listitem" aria-label="Average System Length formula">
             <h4>Average System Length (L<sub>s</sub>)</h4>
             <p>Expected number of customers in the entire system.</p>
-            <div class="math-block" role="img" aria-label="L subscript s equals L subscript q plus lambda over mu">
-              <span class="math">L<span class="sub">s</span> = L<span class="sub">q</span> + <span class="frac"><span>&lambda;</span><span class="bottom">&mu;</span></span></span>
+            <div class="math-block" role="img" aria-label="Average System Length L subscript s equals Average Queue Length L subscript q plus the ratio of Arrival Rate Lambda to Service Rate Mu">
+              <span class="math" aria-hidden="true">L<span class="sub">s</span> = L<span class="sub">q</span> + <span class="frac"><span>&lambda;</span><span class="bottom">&mu;</span></span></span>
             </div>
           </div>
           <div class="formula-card" role="listitem" aria-label="Average Waiting Time formula">
             <h4>Average Waiting Time (W<sub>q</sub>)</h4>
             <p>Expected time a customer spends waiting in the queue.</p>
-            <div class="math-block" role="img" aria-label="W subscript q equals L subscript q over lambda">
-              <span class="math">W<span class="sub">q</span> = <span class="frac"><span>L<span class="sub">q</span></span><span class="bottom">&lambda;</span></span></span>
+            <div class="math-block" role="img" aria-label="Average Waiting Time in Queue W subscript q equals Average Queue Length L subscript q divided by Arrival Rate Lambda">
+              <span class="math" aria-hidden="true">W<span class="sub">q</span> = <span class="frac"><span>L<span class="sub">q</span></span><span class="bottom">&lambda;</span></span></span>
             </div>
           </div>
           <div class="formula-card" role="listitem" aria-label="Average Turnaround Time formula">
             <h4>Average Turnaround Time (W<sub>s</sub>)</h4>
             <p>Total time spent in the system (Wait + Service).</p>
-            <div class="math-block" role="img" aria-label="W subscript s equals W subscript q plus 1 over mu">
-              <span class="math">W<span class="sub">s</span> = W<span class="sub">q</span> + <span class="frac"><span>1</span><span class="bottom">&mu;</span></span></span>
+            <div class="math-block" role="img" aria-label="Average Turnaround Time W subscript s equals Average Waiting Time in Queue W subscript q plus 1 divided by Service Rate Mu">
+              <span class="math" aria-hidden="true">W<span class="sub">s</span> = W<span class="sub">q</span> + <span class="frac"><span>1</span><span class="bottom">&mu;</span></span></span>
             </div>
           </div>
         </div>
@@ -250,8 +251,8 @@
       </div>
 
       <!-- Model Specific Formulas -->
-      <section class="theory-section" aria-labelledby="models-title">
-        <h2 class="section-title" id="models-title">Model-Specific Formulas</h2>
+      <section class="theory-section" aria-labelledby="formula-title">
+        <h3 class="section-title" id="formula-title">Core Performance Formulas</h3>
         <div class="theory-grid" role="list">
           <!-- M/M/1 -->
           <div class="formula-card">
@@ -392,13 +393,13 @@
       </section>
 
       <!-- Little's Law -->
-      <section class="theory-section" aria-labelledby="littles-title">
-        <h2 class="section-title" id="littles-title" style="display:none;">Little's Law</h2>
+      <section class="theory-section" aria-labelledby="laws-title">
+        <h3 class="section-title" id="laws-title">Operational Laws</h3>
         <div class="card" style="border-left: 8px solid var(--accent-color);" role="region" aria-labelledby="littles-law-heading">
           <h4 id="littles-law-heading">Little's Law</h4>
           <p>The long-term average number of customers in a stationary system <strong>L</strong> is equal to the long-term average effective arrival rate <strong>&lambda;</strong> multiplied by the average time a customer spends in the system <strong>W</strong>.</p>
-          <div class="math-block" role="img" aria-label="L equals lambda times W">
-            <span class="math" style="color: var(--accent-color); font-weight: 800;">L = &lambda;W</span>
+          <div class="math-block" role="img" aria-label="Little's Law: Average number of customers L equals effective Arrival Rate Lambda times average time spent in the system W">
+            <span class="math" aria-hidden="true" style="color: var(--accent-color); font-weight: 800;">L = &lambda;W</span>
           </div>
         </div>
       </section>

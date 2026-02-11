@@ -621,7 +621,9 @@ function renderGanttChart(occupancy) {
       const div = document.createElement('div');
       div.className = `gantt-item ${item.type}`;
       div.style.width = `${width}%`;
-      div.innerText = item.label;
+      div.tabIndex = 0;
+      div.setAttribute('role', 'img');
+      div.setAttribute('aria-label', `Server ${idx + 1} | ${item.label}: ${item.start.toFixed(2)} to ${item.end.toFixed(2)}`);
       div.title = `Server ${idx + 1} | ${item.label}: ${item.start.toFixed(2)} - ${item.end.toFixed(2)}`;
       serverRow.appendChild(div);
       if (item.type === 'service') busyTime += (item.end - item.start);

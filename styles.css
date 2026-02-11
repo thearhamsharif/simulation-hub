@@ -51,12 +51,30 @@
   --background-color: #f1f5f9;
   --card-bg: rgba(255, 255, 255, 0.85);
   --text-color: #0f172a;
-  --light-text: #64748b;
+  --light-text: #475569;
   --border-color: rgba(226, 232, 240, 0.5);
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.08);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+/* Accessibility: Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 * {

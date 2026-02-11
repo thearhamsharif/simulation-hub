@@ -67,6 +67,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="main-header" role="banner">
       <div class="logo">
         <h1>Department Simulation</h1>
@@ -87,7 +88,7 @@
       </div>
     </div>
 
-    <main class="container">
+    <main class="container" id="main-content">
       <!-- Input Section -->
       <section class="card input-section">
         <h2 class="section-title">Input Parameters</h2>
@@ -252,6 +253,7 @@
         <div class="action-bar">
           <button class="btn btn-download" aria-label="Download Results as CSV">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <title>Download icon</title>
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
           </button>
@@ -260,9 +262,10 @@
 
       <!-- Charts Section -->
       <section id="chartsSection" class="card" style="display: none;" aria-label="Simulation Visual Analytics">
+        <span id="analytics-section-desc" class="visually-hidden" style="display:none;">This section contains visual charts representing queue length over time, cost distribution, and customer timelines.</span>
         <div class="chart-container">
           <h2 class="section-title">Gantt Chart</h2>
-          <div id="ganttChartTitle" aria-live="polite">Server 1 (0.00%)</div>
+          <h3 id="ganttChartTitle" aria-live="polite">Server 1 (0.00%)</h3>
           <div class="gantt-wrapper">
             <div id="ganttChart" role="img" aria-label="Visual Gantt chart of server activity"></div>
             <div class="gantt-axis" id="ganttAxis" aria-hidden="true"></div>
@@ -284,7 +287,7 @@
           </div>
           <div class="chart-card">
             <h3>Turn Around Time vs Service Time</h3>
-            <canvas id="turnAroundTimeChart" role="img" aria-label="Bar chart showing turnaround vs service time per customer"></canvas>
+            <canvas id="turnAroundTimeChart" role="img" aria-label="Bar chart showing turnaround vs service time per customer" aria-describedby="simulationTable"></canvas>
           </div>
           <div class="ad-card scatter-card" role="complementary" aria-labelledby="ad-growth-title">
             <h3 id="ad-growth-title">Simulating Growth?</h3>
@@ -299,7 +302,7 @@
           </div>
           <div class="chart-card scatter-card">
             <h3>Queue Length over Time</h3>
-            <canvas id="queueTimelineCanvas" role="img" aria-label="Line chart showing number of customers in queue over time"></canvas>
+            <canvas id="queueTimelineCanvas" role="img" aria-label="Line chart showing number of customers in queue over time" aria-describedby="analytics-section-desc"></canvas>
           </div>
           <div class="ad-card scatter-card" role="complementary" aria-labelledby="ad-workflow-title">
             <h3 id="ad-workflow-title">Optimize Your Workflow</h3>
@@ -310,7 +313,7 @@
           </div>
           <div class="chart-card scatter-card">
             <h3>Cost Breakdown (Server vs Waiting)</h3>
-            <canvas id="costBreakdownCanvas" role="img" aria-label="Bar chart showing breakdown of server vs waiting costs"></canvas>
+            <canvas id="costBreakdownCanvas" role="img" aria-label="Bar chart showing breakdown of server vs waiting costs" aria-describedby="steadyStateSection"></canvas>
           </div>
         </div>
       </section>
