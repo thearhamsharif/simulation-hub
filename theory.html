@@ -60,12 +60,12 @@
       <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Simulator</a></li>
-          <li><a href="theory.html" class="active">Theory Guide</a></li>
+          <li><a href="theory.html" class="active" aria-current="page">Theory Guide</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="ad-container ad-top-banner">
+    <div class="ad-container ad-top-banner" role="complementary" aria-label="Top Banner Advertisement">
       <div class="ad-placeholder-text">
         <!-- Replace this div with your Ad Network's Top Banner script -->
         Top Banner Advertisement Slot
@@ -98,8 +98,8 @@
             <li>
               <span class="def-term"><span class="math-inline">&rho;</span> (Rho)</span>
               <span class="def-desc">Utilization Factor: The fraction of time a server is busy. For stability in infinite systems, <span class="math-inline">&rho; < 1</span>.</span>
-                <div class="math-block" style="margin-top: 0.5rem; font-size: 1.2rem; background: var(--background-color); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color);" role="img" aria-label="Rho equals lambda divided by the product of c and mu">
-                  <span class="math">&rho; = <span class="frac"><span>&lambda;</span><span class="bottom">c &middot; &mu;</span></span></span>
+                <div class="math-block" style="margin-top: 0.5rem; font-size: 1.2rem; background: var(--background-color); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color);" role="img" aria-label="Utilization Factor Rho equals Lambda divided by the product of Server Count c and Service Rate Mu">
+                  <span class="math" aria-hidden="true">&rho; = <span class="frac"><span>&lambda;</span><span class="bottom">c &middot; &mu;</span></span></span>
                 </div>
             </li>
             <li>
@@ -110,8 +110,8 @@
         </div>
       </section>
 
-      <div class="ad-container" style="min-height: 90px; margin: 1.5rem auto;">
-        <div class="ad-placeholder-text" style="font-size: 0.8rem;">
+      <div class="ad-container" style="min-height: 90px; margin: 1.5rem auto;" role="complementary" aria-label="Inline Analytics Advertisement">
+        <div class="ad-placeholder-text" style="font-size: 0.8rem;" aria-label="Resource Spotlight Ad Slot">
           <!-- Inline Text/Native Ad -->
           Resource Spotlight: Deep Dive into Process Optimization
         </div>
@@ -242,8 +242,8 @@
         </div>
       </section>
 
-      <div class="ad-container">
-        <div class="ad-placeholder-text">
+      <div class="ad-container" role="complementary" aria-label="Mid-page Advertisement">
+        <div class="ad-placeholder-text" aria-label="Mid-Guide Advertisement Slot">
           <!-- Replace this div with your Ad Network's Mid-page script -->
           Mid-Guide Advertisement Slot
         </div>
@@ -404,7 +404,7 @@
       </section>
     </main>
 
-    <div class="ad-container">
+    <div class="ad-container" role="complementary" aria-label="Footer Advertisement">
       <div class="ad-placeholder-text">
         <!-- Footer Ad for Theory Guide -->
         End-of-Guide Recommended Content

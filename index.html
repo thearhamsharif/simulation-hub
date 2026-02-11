@@ -67,20 +67,20 @@
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header" role="banner">
       <div class="logo">
         <h1>Department Simulation</h1>
         <p>Simulation & Modeling Analysis Hub</p>
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html" class="active">Simulator</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Simulator</a></li>
           <li><a href="theory.html">Theory Guide</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="ad-container ad-top-banner">
+    <div class="ad-container ad-top-banner" role="complementary" aria-label="Top Banner Advertisement">
       <div class="ad-placeholder-text">
         <!-- Replace this div with your Ad Network's Top Banner script -->
         Top Banner Advertisement Slot
@@ -286,9 +286,9 @@
             <h3>Turn Around Time vs Service Time</h3>
             <canvas id="turnAroundTimeChart" role="img" aria-label="Bar chart showing turnaround vs service time per customer"></canvas>
           </div>
-          <div class="ad-card scatter-card">
-            <h3>Simulating Growth?</h3>
-            <div class="ad-placeholder-text">
+          <div class="ad-card scatter-card" role="complementary" aria-labelledby="ad-growth-title">
+            <h3 id="ad-growth-title">Simulating Growth?</h3>
+            <div class="ad-placeholder-text" aria-label="Native Analytics Advertisement Slot">
               <!-- Native Ad Slot: Matches chart layout -->
               Native Analytics Advertisement
             </div>
@@ -301,9 +301,9 @@
             <h3>Queue Length over Time</h3>
             <canvas id="queueTimelineCanvas" role="img" aria-label="Line chart showing number of customers in queue over time"></canvas>
           </div>
-          <div class="ad-card scatter-card">
-            <h3>Optimize Your Workflow</h3>
-            <div class="ad-placeholder-text">
+          <div class="ad-card scatter-card" role="complementary" aria-labelledby="ad-workflow-title">
+            <h3 id="ad-workflow-title">Optimize Your Workflow</h3>
+            <div class="ad-placeholder-text" aria-label="Second Native Ad Slot">
               <!-- Second Native Ad Slot -->
               Native Vertical Advertisement
             </div>
@@ -316,7 +316,7 @@
       </section>
     </main>
 
-    <div class="ad-container">
+    <div class="ad-container" role="complementary" aria-label="Footer Advertisement">
       <div class="ad-placeholder-text">
         <!-- Replace this div with your Ad Network's Footer/In-feed script -->
         Bottom Content Advertisement Slot
