@@ -31,9 +31,16 @@ A state-of-the-art **Discrete Event Simulation (DES)** tool designed for modelin
   - **Social Meta Tags**: Complete Open Graph and Twitter Card integration for consistent social sharing.
   - **Semantic HTML**: Optimized structure for search crawlers and performance.
 - **High-End Accessibility**:
+  - **WCAG 2.2 AAA Compliance**: Optimized for the highest accessibility standards.
   - **ARIA Landmarks & Labels**: Full support for screen readers with proper landmarks and descriptive labels.
   - **Dynamic Life Regions**: Uses `aria-live="polite"` for seamless updates.
   - **A11y Formulas**: Mathematical expressions annotated with ARIA descriptions for full screen-reader clarity.
+
+## 💰 Monetization & Verification
+
+- **Integrated Monetization**: Uses **Monetag** for banner and native ad placements.
+- **Authorized Digital Sellers**: Implementation of `ads.txt` for ad network transparency.
+- **Domain Verification**: Integrated ownership verification via meta tags.
 
 ## 🛠️ Technical Background
 
