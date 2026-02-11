@@ -801,6 +801,115 @@ canvas {
   }
 }
 
+/* Ad Integration Styles */
+.ad-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  min-height: 120px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px dashed var(--primary-light);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ad-container::before {
+  content: 'Sponsored Advertisement';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 0.65rem;
+  color: var(--light-text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.ad-placeholder-text {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+  padding: 1rem;
+}
+
+.ad-container:hover {
+  border-style: solid;
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.ad-top-banner {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  border-radius: 12px;
+  border-top: 1px dashed var(--primary-light);
+}
+
+@media (max-width: 768px) {
+  .ad-container {
+    min-height: 250px;
+    margin: 1.5rem auto;
+  }
+}
+
+/* Native Ad Card Styles */
+.ad-card {
+  min-height: 350px;
+  background: white;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.ad-card .ad-placeholder-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  background: #fafafa;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.ad-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.ad-card::before {
+  content: 'Sponsored Content';
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--light-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ad-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
 @keyframes fadeOut {
   from {
     opacity: 1;
