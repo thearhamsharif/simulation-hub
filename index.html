@@ -97,10 +97,10 @@
             <label for="queuingModel">Queuing Model</label>
             <select id="queuingModel" aria-label="Select queuing model type">
               <optgroup label="Markovian (Poisson) Models">
-                <option value="MM1">M/M/1 (Single Server)</option>
-                <option value="MMC" selected>M/M/c (Multi-Server)</option>
-                <option value="MM1K">M/M/1/K (Finite Capacity Single)</option>
-                <option value="MMCK">M/M/c/K (Finite Capacity Multi)</option>
+                <option value="MM1"><abbr title="Markovian Arrival, Markovian Service, 1 Server">M/M/1</abbr> (Single Server)</option>
+                <option value="MMC" selected><abbr title="Markovian Arrival, Markovian Service, c Servers">M/M/c</abbr> (Multi-Server)</option>
+                <option value="MM1K"><abbr title="Markovian Arrival, Markovian Service, 1 Server, K Capacity">M/M/1/K</abbr> (Finite Capacity Single)</option>
+                <option value="MMCK"><abbr title="Markovian Arrival, Markovian Service, c Servers, K Capacity">M/M/c/K</abbr> (Finite Capacity Multi)</option>
               </optgroup>
               <optgroup label="General Service Models">
                 <option value="MG1">M/G/1 (General Service)</option>
@@ -140,11 +140,17 @@
             </select>
           </div>
           <div class="input-group">
-            <label for="lambda">&lambda; (Arrival Rate)</label>
+            <label for="lambda">
+              &lambda; (Arrival Rate)
+              <span class="help-text" style="display: block; font-size: 0.75rem; color: var(--light-text); font-weight: 400;">Avg. arrivals per unit time</span>
+            </label>
             <input type="number" id="lambda" value="2" step="0.1" aria-label="Arrival rate (lambda)">
           </div>
           <div class="input-group">
-            <label for="mu">&mu; (Service Rate)</label>
+            <label for="mu">
+              &mu; (Service Rate)
+              <span class="help-text" style="display: block; font-size: 0.75rem; color: var(--light-text); font-weight: 400;">Avg. service capacity per unit time</span>
+            </label>
             <input type="number" id="mu" value="3" step="0.1" aria-label="Service rate (mu)">
           </div>
           <div id="capacityGroup" class="input-group">
@@ -154,7 +160,7 @@
           <div class="input-group">
             <label for="priorityModel">Priority System</label>
             <select id="priorityModel" aria-label="Select priority queuing model">
-              <option value="FIFO">FIFO (No Priority)</option>
+              <option value="FIFO"><abbr title="First-In, First-Out">FIFO</abbr> (No Priority)</option>
               <option value="NP">Non-Preemptive Priority</option>
               <option value="PR">Preemptive Priority</option>
             </select>

@@ -82,6 +82,9 @@
       <!-- Fundamental Parameters -->
       <section class="theory-section" aria-labelledby="params-title">
         <h3 class="section-title" id="params-title">Fundamental Parameters</h3>
+        <div class="plain-english-summary" style="background: rgba(17, 94, 89, 0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-color);">
+          <strong>In Plain English:</strong> To understand a queue, we need to know how fast people arrive (&lambda;), how fast they are served (&mu;), and how many people can do the work (c).
+        </div>
         <div class="card">
           <ul class="def-list">
             <li>
@@ -121,6 +124,9 @@
       <!-- Kendall's Notation -->
       <section class="theory-section" aria-labelledby="kendall-title">
         <h3 class="section-title" id="kendall-title">Kendall's Notation</h3>
+        <div class="plain-english-summary" style="background: rgba(17, 94, 89, 0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-color);">
+          <strong>In Plain English:</strong> This is a shorthand code used to describe any queue quickly, like a recipe name for a specific type of problem.
+        </div>
         <div class="card" role="region" aria-label="Reference Table for Kendall's Notation">
           <p>Standardized shorthand for describing queuing models in the format: <strong>A / B / c / K / m / Z</strong></p>
           <div class="theory-table-wrapper" role="region" aria-label="Kendall Symbols Reference">
@@ -134,14 +140,14 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>A</strong></td>
+                  <td><strong><abbr title="Arrival Distribution">A</abbr></strong></td>
                   <td>Arrival Distribution</td>
-                  <td>M (Poisson/Markov), G (General), D (Deterministic)</td>
+                  <td><abbr title="Poisson Process / Markovian">M</abbr>, <abbr title="Deterministic">D</abbr>, <abbr title="General">G</abbr></td>
                 </tr>
                 <tr>
-                  <td><strong>B</strong></td>
+                  <td><strong><abbr title="Service Distribution">B</abbr></strong></td>
                   <td>Service Distribution</td>
-                  <td>M (Exponential), G (General), D (Deterministic)</td>
+                  <td><abbr title="Exponential / Markovian">M</abbr>, <abbr title="Deterministic">D</abbr>, <abbr title="General">G</abbr></td>
                 </tr>
                 <tr>
                   <td><strong>c</strong></td>
@@ -395,6 +401,9 @@
       <!-- Little's Law -->
       <section class="theory-section" aria-labelledby="laws-title">
         <h3 class="section-title" id="laws-title">Operational Laws</h3>
+        <div class="plain-english-summary" style="background: rgba(17, 94, 89, 0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid var(--primary-color);">
+          <strong>In Plain English:</strong> Little's Law is a simple rule that says the number of people in a shop depends on how fast they enter and how long they stay.
+        </div>
         <div class="card" style="border-left: 8px solid var(--accent-color);" role="region" aria-labelledby="littles-law-heading">
           <h4 id="littles-law-heading">Little's Law</h4>
           <p>The long-term average number of customers in a stationary system <strong>L</strong> is equal to the long-term average effective arrival rate <strong>&lambda;</strong> multiplied by the average time a customer spends in the system <strong>W</strong>.</p>
